@@ -38,6 +38,19 @@ export class ViewTaskComponent {
   
   }
 
+  deleteTask = (id:any) => {
+    this.api.deleteTask({"id":id}).subscribe(
+      (response:any) =>{
+        if(response.status=="success"){
+          alert("Task Deleted")
+          window.location.reload()
+        }else{
+          alert("Error in deletion")
+        }
+      }
+    )
+  }
+
   taskData:any = []
   searchData:any = []
   loading:boolean = true

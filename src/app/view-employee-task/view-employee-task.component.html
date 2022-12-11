@@ -1,3 +1,4 @@
+<app-emp-navbar></app-emp-navbar>
 <div class="container">
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -35,11 +36,11 @@
                                     <td class="text-center">{{i.taskCompleteDate}}</td>
                                     <td class="text-center">{{i.taskStatus}}</td>
                                     <td class="text-center">
-                                        <button *ngIf="!i.taskStatus" style="width: 6rem; height:2rem;" class="btn btn-danger" (click)="markAsComplete(i.id)"><p>Complete</p> </button>
+                                        <button *ngIf="!i.taskStatus; else disabledBlock" style="width: 6rem; height:2rem;" class="btn btn-danger" (click)="markAsComplete(i.id)"><p>Complete</p> </button>
+                                        <ng-template #disabledBlock> <button style="width: 6rem; height:2rem;" class="btn btn-danger disabled" (click)="markAsComplete(i.id)"><p>Done</p> </button></ng-template>
                                     </td>
                                 </tr>
                             </ng-template>
-
                         </tbody>
                     </table>
                 </div>
