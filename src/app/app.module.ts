@@ -12,6 +12,7 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ViewEmployeeComponent } from './view-employee/view-employee.component';
+import { ViewTaskComponent } from './view-task/view-task.component';
 
 const myRoute:Routes = [
   {
@@ -33,6 +34,10 @@ const myRoute:Routes = [
   {
     path:"viewEmployee",
     component: ViewEmployeeComponent
+  },
+  {
+    path:"viewTask",
+    component: ViewTaskComponent
   }
 ]
 
@@ -44,7 +49,8 @@ const myRoute:Routes = [
     AddEmployeeComponent,
     AddTaskComponent,
     NavbarComponent,
-    ViewEmployeeComponent
+    ViewEmployeeComponent,
+    ViewTaskComponent
   ],
   imports: [
     BrowserModule,
