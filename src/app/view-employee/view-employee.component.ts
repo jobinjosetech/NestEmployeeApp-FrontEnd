@@ -22,12 +22,20 @@ export class ViewEmployeeComponent {
     let data:any = {
       "empName":this.name
     }
-    this.api.searchEmployee(data).subscribe(
-      (response:any) =>{
-        console.log(response)
-        this.searchData = response
-      }
-    )
+    if (this.name.length == 0) {
+      this.searchData = []
+    } else {
+      this.api.searchEmployee(data).subscribe(
+        (response: any) => {
+          if (response.length == 0) {
+            this.searchData = []
+          } else {
+            this.searchData = response
+          }
+        }
+      )
+    }
+  
   }
 
   addTask = (id:any)=>{

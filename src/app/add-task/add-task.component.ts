@@ -27,6 +27,7 @@ export class AddTaskComponent {
       (response:any)=>{
         if(response.status =="success") {
           alert("Task Added Successfully")
+          this.route.navigate(["/viewEmployee"])
         }else{
           alert("Error in adding task")
         }

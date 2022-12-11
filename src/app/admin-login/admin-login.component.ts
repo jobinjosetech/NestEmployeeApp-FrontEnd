@@ -15,7 +15,7 @@ export class AdminLoginComponent {
 
   readValues(){
     if(this.username=="admin"&& this.password=="12345") {
-      this.route.navigate(["/addEmployee"])
+      this.route.navigate(["/viewEmployee"])
     }else{
       alert("Oops!!! Please check your credentials ")
     }
