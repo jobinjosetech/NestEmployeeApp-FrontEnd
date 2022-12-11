@@ -9,7 +9,9 @@ import { ApiService } from '../api.service';
   styleUrls: ['./admin-login.component.css']
 })
 export class AdminLoginComponent {
-  constructor(private route:Router){}
+  constructor(private route:Router){
+    localStorage.removeItem("userInfo")
+  }
   username=""
   password=""
 
