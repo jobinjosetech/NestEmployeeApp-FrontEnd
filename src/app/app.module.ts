@@ -9,6 +9,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
+import { AddTaskComponent } from './add-task/add-task.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { ViewEmployeeComponent } from './view-employee/view-employee.component';
 
 const myRoute:Routes = [
   {
@@ -22,6 +25,14 @@ const myRoute:Routes = [
   {
     path:"addEmployee",
     component: AddEmployeeComponent
+  },
+  {
+    path:"addTask",
+    component: AddTaskComponent
+  },
+  {
+    path:"viewEmployee",
+    component: ViewEmployeeComponent
   }
 ]
 
@@ -30,7 +41,10 @@ const myRoute:Routes = [
     AppComponent,
     AdminLoginComponent,
     UserLoginComponent,
-    AddEmployeeComponent
+    AddEmployeeComponent,
+    AddTaskComponent,
+    NavbarComponent,
+    ViewEmployeeComponent
   ],
   imports: [
     BrowserModule,
