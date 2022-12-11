@@ -44,4 +44,9 @@ export class ApiService {
   updateStatus = (data:any)=>{
     return this.http.post("http://localhost:8080/updateStatus", data)
   }
+
+  deleteTask = (data:any) =>{
+    console.log(data)
+    return this.http.post("http://localhost:8080/deleteTask", data)
+  }
 }
