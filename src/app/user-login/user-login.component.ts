@@ -23,8 +23,7 @@ export class UserLoginComponent {
           localStorage.setItem('userInfo', response.userId)
           this.username = ""
           this.password = ""
-          alert("Login Success ")
-          this.route.navigate(["/userLogin"])
+          this.route.navigate(["/viewEmpTask"])
         } else {
           alert("Oops!!! Please check your credentials ")
         }
