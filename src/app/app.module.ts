@@ -14,6 +14,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ViewEmployeeComponent } from './view-employee/view-employee.component';
 import { ViewTaskComponent } from './view-task/view-task.component';
 import { ViewEmployeeTaskComponent } from './view-employee-task/view-employee-task.component';
+import { EmpNavbarComponent } from './emp-navbar/emp-navbar.component';
 
 const myRoute:Routes = [
   {
@@ -56,7 +57,8 @@ const myRoute:Routes = [
     NavbarComponent,
     ViewEmployeeComponent,
     ViewTaskComponent,
-    ViewEmployeeTaskComponent
+    ViewEmployeeTaskComponent,
+    EmpNavbarComponent
   ],
   imports: [
     BrowserModule,
